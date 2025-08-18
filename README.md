@@ -16,7 +16,7 @@ A simple task management system with CRUD operations.
 ### Backend
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/task-manager-api.git
+git clone https://github.com/lucifer9973/task-manager-api.git
 ```
 2. Navigate to the server directory and install dependencies:
 ```bash
