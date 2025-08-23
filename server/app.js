@@ -24,8 +24,6 @@ mongoose.connect(MONGO_URI, {
     console.log("✅ MongoDB connected successfully");
 }).catch(err => {
     console.error("❌ MongoDB connection error:", err.message);
-    console.log("💡 Make sure MongoDB is running or use MongoDB Atlas");
-    console.log("💡 You can also set MONGO_URI in .env file");
 });
 
 // Handle MongoDB connection events
@@ -75,6 +73,5 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`🚀 Server running at http://localhost:${PORT}`));
+// ✅ Export for Vercel
+module.exports = app;
