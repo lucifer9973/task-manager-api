@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: task-manager-api
+    env: node
+    buildCommand: cd client && npm install && npm run build
+    startCommand: cd server && npm install && node app.js
+    envVars:
+      - key: NODE_VERSION
+        value: 22.16.0
