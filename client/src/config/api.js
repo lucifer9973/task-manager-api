@@ -1,5 +1,6 @@
 // API configuration
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+// Use relative path so it works on both localhost and Vercel
+const API_BASE_URL = process.env.REACT_APP_API_URL || '';
 
 export const API_ENDPOINTS = {
   AUTH: {
