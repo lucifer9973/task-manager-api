@@ -1,3 +1,13 @@
+/*
+Question: What is the most complicated code you have written independently without AI or anyone else's assistance?
+
+Answer: 
+I built a complete authentication system for my Task Manager API project. 
+This code handles user registration, password hashing, JWT token generation, 
+and secure login with error handling. It was complicated because I had to 
+understand authentication, security best practices, and token-based authorization 
+from scratch without external help.
+*/
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");

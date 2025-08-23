@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { API_ENDPOINTS } from '../config/api';
 
 const AddTask = ({ onTaskAdded }) => {
   const [title, setTitle] = useState('');
@@ -14,7 +15,7 @@ const AddTask = ({ onTaskAdded }) => {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        'http://localhost:5000/api/tasks',
+        API_ENDPOINTS.TASKS.BASE,
         { title: title.trim(), description: description.trim() },
         { headers: { Authorization: `Bearer ${token}` } }
       );

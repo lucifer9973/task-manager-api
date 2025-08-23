@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { API_ENDPOINTS } from '../config/api';
 
 const Register = ({ onRegister, onSwitchToLogin }) => {
   const [name, setName] = useState('');
@@ -14,7 +15,7 @@ const Register = ({ onRegister, onSwitchToLogin }) => {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', {
+      const response = await axios.post(API_ENDPOINTS.AUTH.REGISTER, {
         name,
         email,
         password
